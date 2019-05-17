@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./vue.js"></script>
+</head>
+<body>
+  <div id="app" name="xxx">
+    <span>{{b}}</span>
+  </div>
+</body>
+</html>
+<script>
+  // const childComponent = {
+  //   created(){
+  //     console.log(this.$options.parent)
+  //   }
+  // }
+//   Vue.component('ball', {
+//   data: function () {
+//     return {
+//       age:100
+//     }
+//   },
+//   methods: {
+//     giveAdvice: function () {
+//       var randomAdviceIndex = Math.floor(Math.random() * this.possibleAdvice.length)
+//       this.$emit('give-advice', this.possibleAdvice[randomAdviceIndex])
+//     }
+//   },
+//   template: `
+//     <button v-on:click="giveAdvice">
+//       {{age}}
+//     </button>
+//   `
+// })
+//   var res = Vue.compile('<div><span>{{ msg }}</span><ball></ball></div>')
+//     new Vue({
+//       el:'#app',
+//       data: {
+//         msg: 'hello'
+//       },
+//       components:{
+//         ball
+//       },
+//       render: res.render,
+//       staticRenderFns: res.staticRenderFns
+//     })
+  
+  new Vue({
+    el:'#app',
+    customOption: 'foo',
+    comments:true,
+    data:{
+      b:11
+    }
+  })
+</script>
